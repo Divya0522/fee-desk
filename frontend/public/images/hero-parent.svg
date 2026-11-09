@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" fill="none">
+  <defs>
+    <linearGradient id="warmBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5F1E8" />
+      <stop offset="100%" stop-color="#E8E2D5" />
+    </linearGradient>
+    <linearGradient id="parentSkin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C58B68" />
+      <stop offset="100%" stop-color="#A76D49" />
+    </linearGradient>
+  </defs>
+  <!-- Background with warm photographic tone wash -->
+  <rect width="1200" height="800" rx="20" fill="url(#warmBg)" />
+  
+  <!-- Architectural window / natural morning light ambiance -->
+  <rect x="120" y="80" width="340" height="520" rx="12" fill="#FFFFFF" fill-opacity="0.45" />
+  <line x1="290" y1="80" x2="290" y2="600" stroke="#DDD6C8" stroke-width="4" />
+  <line x1="120" y1="340" x2="460" y2="340" stroke="#DDD6C8" stroke-width="4" />
+
+  <!-- Subtle plant foliage in background -->
+  <path d="M180,680 Q200,520 280,480 Q260,560 210,680 Z" fill="#2E4A43" fill-opacity="0.25" />
+  <path d="M140,680 Q150,560 210,510 Q190,580 160,680 Z" fill="#2E4A43" fill-opacity="0.3" />
+
+  <!-- Natural silhouette of a calm parent reading fee details on phone -->
+  <!-- Torso / Kurta -->
+  <path d="M520,800 C540,640 600,560 720,540 C840,560 900,640 920,800 Z" fill="#0E4D44" />
+  <!-- Kurta collar line -->
+  <path d="M680,542 L720,630 L760,542" stroke="#FAF8F4" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Neck and Head -->
+  <rect x="686" y="440" width="68" height="110" rx="20" fill="url(#parentSkin)" />
+  <!-- Head / Face profile smiling gently downward -->
+  <ellipse cx="720" cy="360" rx="76" height="96" fill="url(#parentSkin)" />
+  <!-- Hair (neat, natural) -->
+  <path d="M640,340 C644,250 710,240 780,250 C800,280 804,330 796,360 C780,320 740,310 650,336 Z" fill="#1C2022" />
+  <!-- Subtle glasses / spectacles -->
+  <circle cx="696" cy="365" r="18" stroke="#1C2022" stroke-width="2.5" fill="none" />
+  <circle cx="742" cy="365" r="18" stroke="#1C2022" stroke-width="2.5" fill="none" />
+  <line x1="714" y1="365" x2="724" y2="365" stroke="#1C2022" stroke-width="2.5" />
+  <!-- Smile line -->
+  <path d="M706,405 Q720,418 734,405" stroke="#683F25" stroke-width="3" stroke-linecap="round" fill="none" />
+
+  <!-- Arms holding smartphone -->
+  <path d="M570,680 Q640,640 700,670" stroke="url(#parentSkin)" stroke-width="48" stroke-linecap="round" fill="none" />
+  <path d="M870,680 Q800,640 740,670" stroke="url(#parentSkin)" stroke-width="48" stroke-linecap="round" fill="none" />
+
+  <!-- Hands gently cradling phone -->
+  <ellipse cx="690" cy="670" rx="28" ry="20" fill="url(#parentSkin)" />
+  <ellipse cx="750" cy="670" rx="28" ry="20" fill="url(#parentSkin)" />
+
+  <!-- Warm ambient glow on parent's face from morning window -->
+  <circle cx="850" cy="180" r="160" fill="#FAF8F4" fill-opacity="0.3" filter="blur(40px)" />
+</svg>

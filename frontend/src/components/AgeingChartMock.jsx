@@ -1,0 +1,3 @@
+export default function AgeingChartMock({ t }) {
+  return <div className="chart" aria-label={t.staff.chart}><div className="chart-title">{t.staff.chart}</div><div className="bars"><div className="bar-wrap"><div className="bar" style={{ height: '78%' }} /><span>{t.staff.labels[0]}</span></div><div className="bar-wrap"><div className="bar two" style={{ height: '48%' }} /><span>{t.staff.labels[1]}</span></div><div className="bar-wrap"><div className="bar three" style={{ height: '25%' }} /><span>{t.staff.labels[2]}</span></div></div><div className="chart-legend"><span>● {t.staff.labels[0]}</span><span>● {t.staff.labels[1]}</span><span>● {t.staff.labels[2]}</span></div></div>
+}

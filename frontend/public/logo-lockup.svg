@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" width="160" height="40" fill="none" aria-label="FeeDesk">
+  <!-- Monogram Mark -->
+  <g transform="translate(0, 4)">
+    <rect width="32" height="32" rx="8" fill="#0E4D44" />
+    <rect x="9" y="8" width="3" height="16" rx="1.5" fill="#FAF8F4" />
+    <rect x="9" y="8" width="14" height="3.2" rx="1.6" fill="#FAF8F4" />
+    <rect x="9" y="15" width="9.5" height="3" rx="1.5" fill="#FAF8F4" />
+    <circle cx="21.5" cy="16.5" r="1.6" fill="#D98A1E" />
+  </g>
+  <!-- Wordmark in Fraunces styled serif -->
+  <text x="42" y="27" font-family="'Fraunces', Georgia, serif" font-size="22" font-weight="600" letter-spacing="-0.02em" fill="#14211F">FeeDesk</text>
+</svg>

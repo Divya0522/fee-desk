@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" fill="none">
+  <defs>
+    <linearGradient id="classWarm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF8F4" />
+      <stop offset="100%" stop-color="#EEE9DE" />
+    </linearGradient>
+  </defs>
+  <!-- Background with warm coaching classroom interior -->
+  <rect width="900" height="600" rx="20" fill="url(#classWarm)" />
+  
+  <!-- Blackboard / classroom focus area in background -->
+  <rect x="80" y="60" width="740" height="200" rx="8" fill="#142B27" />
+  <rect x="90" y="70" width="720" height="180" rx="4" fill="#0E2320" />
+  <!-- Blackboard chalk formulas (JEE / NEET physics & math notes) -->
+  <text x="120" y="125" font-family="'Inter', sans-serif" font-size="16" fill="#A8BFBA" opacity="0.8">F = dp/dt • ∫ v dt • λ = h/p • Batch 2026-27</text>
+  <text x="120" y="165" font-family="'Inter', sans-serif" font-size="20" font-weight="600" fill="#FAF8F4">Unit Test 04 — Mechanical Energy &amp; Wave Optics</text>
+  <text x="120" y="205" font-family="'Inter', sans-serif" font-size="14" fill="#D98A1E">Next Session: 10:00 AM • Room 3B, Jaipur Main Centre</text>
+
+  <!-- Classroom study desks -->
+  <rect x="140" y="380" width="620" height="30" rx="4" fill="#D2C8B8" />
+  <rect x="160" y="410" width="16" height="150" fill="#8C8476" />
+  <rect x="724" y="410" width="16" height="150" fill="#8C8476" />
+
+  <!-- Students sitting attentively at desk with open textbooks & notebooks -->
+  <!-- Student 1 -->
+  <ellipse cx="320" cy="340" rx="40" ry="46" fill="#B77E5C" />
+  <path d="M280,330 C285,280 320,270 360,285 C365,310 360,340 355,350 Z" fill="#22252A" />
+  <path d="M240,480 C250,390 310,380 390,380 C405,420 410,480 410,540 L230,540 Z" fill="#2E4A43" />
+  <!-- Notebook & Pen -->
+  <rect x="330" y="370" width="90" height="60" rx="3" fill="#FFFFFF" transform="rotate(-5, 330, 370)" stroke="#E0DACF" />
+  <line x1="340" y1="385" x2="405" y2="380" stroke="#7A8582" stroke-width="2" />
+  <line x1="340" y1="400" x2="395" y2="395" stroke="#7A8582" stroke-width="2" />
+
+  <!-- Student 2 -->
+  <ellipse cx="580" cy="345" rx="38" ry="44" fill="#9C6B4E" />
+  <path d="M545,335 C550,285 580,275 620,288 C625,315 620,345 615,355 Z" fill="#1A1C1E" />
+  <path d="M500,480 C510,395 565,385 645,385 C660,425 665,480 665,540 L490,540 Z" fill="#4A5654" />
+  <!-- Open Textbook -->
+  <rect x="520" y="372" width="110" height="65" rx="3" fill="#FFFFFF" stroke="#E0DACF" />
+  <line x1="575" y1="372" x2="575" y2="437" stroke="#CBD5E1" stroke-width="2" />
+  <line x1="530" y1="388" x2="565" y2="388" stroke="#7A8582" stroke-width="2" />
+  <line x1="530" y1="404" x2="565" y2="404" stroke="#7A8582" stroke-width="2" />
+  <line x1="585" y1="388" x2="620" y2="388" stroke="#7A8582" stroke-width="2" />
+</svg>

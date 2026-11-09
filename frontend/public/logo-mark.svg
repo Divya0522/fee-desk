@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none" aria-label="FeeDesk Mark">
+  <!-- Rounded tile base with subtle inset -->
+  <rect x="2" y="2" width="44" height="44" rx="11" fill="#0E4D44" />
+  <!-- Abstract architectural 'F' made of crisp ledger lines with rupee notch -->
+  <!-- Vertical spine -->
+  <rect x="13" y="12" width="4.5" height="24" rx="2.25" fill="#FAF8F4" />
+  <!-- Top horizontal bar with rupee angle -->
+  <rect x="13" y="12" width="20" height="4.5" rx="2.25" fill="#FAF8F4" />
+  <!-- Middle ledger bar with saffron verification tick/notch -->
+  <rect x="13" y="22" width="14" height="4.2" rx="2.1" fill="#FAF8F4" />
+  <!-- Saffron accent micro-ledger dot/notch -->
+  <circle cx="31" cy="24.1" r="2.2" fill="#D98A1E" />
+</svg>
