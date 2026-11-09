@@ -66,6 +66,7 @@ export default function ActivationStep3({
       relationship,
       language: prefLang,
       reminderOptIn,
+      consent: true,
       consentGiven: true,
     })
   }

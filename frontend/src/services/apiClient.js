@@ -18,6 +18,28 @@ export class ApiError extends Error {
   }
 }
 
+const TOKEN_KEY = 'feedesk_auth_token'
+
+export function setAuthToken(token) {
+  try {
+    if (token) {
+      localStorage.setItem(TOKEN_KEY, token)
+    } else {
+      localStorage.removeItem(TOKEN_KEY)
+    }
+  } catch {
+    // Ignore storage errors in incognito or restricted mode
+  }
+}
+
+export function getAuthToken() {
+  try {
+    return localStorage.getItem(TOKEN_KEY)
+  } catch {
+    return null
+  }
+}
+
 // Session expired event listener hook
 let onUnauthorizedCallback = null
 export function setUnauthorizedHandler(fn) {
@@ -30,8 +52,10 @@ export async function request(endpoint, options = {}) {
 
   const url = `${BASE_URL.replace(/\/+$/, '')}${endpoint.startsWith('/') ? endpoint : `/${endpoint}`}`
 
+  const token = getAuthToken()
   const headers = {
     'Content-Type': 'application/json',
+    ...(token ? { Authorization: `Bearer ${token}` } : {}),
     ...(options.headers || {}),
   }
 
@@ -88,6 +112,7 @@ export async function request(endpoint, options = {}) {
 
     // On 401 from any call except /auth/me, clear session and redirect to /signin
     if (res.status === 401 && !endpoint.includes('/auth/me')) {
+      setAuthToken(null)
       if (onUnauthorizedCallback) {
         onUnauthorizedCallback(message)
       } else {

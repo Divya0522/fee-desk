@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import * as authApi from '../services/authApi'
-import { setUnauthorizedHandler } from '../services/apiClient'
+import { setUnauthorizedHandler, setAuthToken } from '../services/apiClient'
 import Toast from '../components/auth/Toast'
 import { AuthContext } from './useAuth'
 
@@ -56,6 +56,7 @@ export function AuthProvider({ children }) {
     try {
       const res = await authApi.verifyOtp({ phone, otp })
       const authenticatedUser = res.user || res
+      if (res.token) setAuthToken(res.token)
       if (res.isActivated === false || authenticatedUser.isActivated === false) {
         // Unactivated parent: session cookie is withheld until statutory DPDP consent
         return { ...authenticatedUser, isActivated: false }
@@ -74,6 +75,7 @@ export function AuthProvider({ children }) {
     try {
       const res = await authApi.staffLogin({ email, password })
       const authenticatedUser = res.user || res
+      if (res.token) setAuthToken(res.token)
       setUser(authenticatedUser)
       showToast(`Welcome back, ${authenticatedUser.name}`, 'success')
       return authenticatedUser
@@ -88,6 +90,7 @@ export function AuthProvider({ children }) {
     try {
       const res = await authApi.activateAccount(activationData)
       const authenticatedUser = res.user || res
+      if (res.token) setAuthToken(res.token)
       setUser(authenticatedUser)
       showToast('Account activated! Welcome to FeeDesk.', 'success')
       return authenticatedUser
@@ -104,6 +107,7 @@ export function AuthProvider({ children }) {
     } catch {
       // Ignore network errors on logout
     } finally {
+      setAuthToken(null)
       setUser(null)
       setIsLoading(false)
       showToast('You have been logged out.', 'info')

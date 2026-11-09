@@ -10,22 +10,22 @@ export function verifyToken(token) {
 }
 
 export function setAuthCookie(res, token) {
-  const isProd = env.NODE_ENV === 'production'
+  const isCrossSite = env.NODE_ENV === 'production' || env.CLIENT_URL?.startsWith('https')
   res.cookie('token', token, {
     httpOnly: true,
-    secure: isProd,
-    sameSite: isProd ? 'none' : 'lax',
+    secure: isCrossSite,
+    sameSite: isCrossSite ? 'none' : 'lax',
     maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     path: '/',
   })
 }
 
 export function clearAuthCookie(res) {
-  const isProd = env.NODE_ENV === 'production'
+  const isCrossSite = env.NODE_ENV === 'production' || env.CLIENT_URL?.startsWith('https')
   res.cookie('token', '', {
     httpOnly: true,
-    secure: isProd,
-    sameSite: isProd ? 'none' : 'lax',
+    secure: isCrossSite,
+    sameSite: isCrossSite ? 'none' : 'lax',
     expires: new Date(0),
     path: '/',
   })

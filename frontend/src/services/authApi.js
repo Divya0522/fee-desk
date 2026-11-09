@@ -63,7 +63,7 @@ export async function activateAccount(activationData) {
     guardianName: String(activationData.guardianName || activationData.parentName).trim(),
     relationship: String(activationData.relationship).trim(),
     language: activationData.language || 'en',
-    consent: Boolean(activationData.consent),
+    consent: Boolean(activationData.consent ?? activationData.consentGiven),
     reminderOptIn: Boolean(activationData.reminderOptIn ?? activationData.optInUpdates),
   })
 }

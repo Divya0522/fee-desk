@@ -30,8 +30,14 @@ app.use(helmet())
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Allow requests with no origin (e.g. mobile apps, curl, server-to-server) or matching CLIENT_URL
-      if (!origin || origin === env.CLIENT_URL || env.NODE_ENV !== 'production') {
+      if (!origin) return callback(null, true)
+      const clientUrlClean = env.CLIENT_URL?.replace(/\/+$/, '')
+      const originClean = origin.replace(/\/+$/, '')
+      if (
+        originClean === clientUrlClean ||
+        origin.endsWith('.vercel.app') ||
+        env.NODE_ENV !== 'production'
+      ) {
         callback(null, true)
       } else {
         callback(new Error('Blocked by CORS policy'))
